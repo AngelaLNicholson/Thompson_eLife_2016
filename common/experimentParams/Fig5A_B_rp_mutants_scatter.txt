@@ -1,0 +1,14 @@
+#Fig 5A and 5B, scatterplots showing relationships between asc1 and rps mutants
+INDIR1=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.18/DESeqData/yeast_rps/
+OUTDIR=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/S6_rpgs/TEcomparisons/
+OUTPREFIX=
+FILES1
+yeast_mutants_M1X_allData_filtered.p
+rps_rps0b_allData_filtered.p
+rps_rps16b_allData_filtered.p
+
+ANALYSES
+MultiScatter 160228_TE_array_rp_mutants -comparex 1 TE val -mutants asc1_M1X rps0b rps16b
+
+PLOTS
+MultiScatter {OUTDIR}160228_TE_array_rp_mutants -pickledObjects {OUTDIR}160228_TE_array_rp_mutants.p -xmin -3 -ymin -3 -xmax 3 -ymax 3 -axisfont 6 -tickfont 5 -panels 2 -scattersize 0.2

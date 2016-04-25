@@ -1,0 +1,50 @@
+####################
+# User preferences #
+####################
+#These will be different for each library
+RAW_SEQUENCES="/home/mk/TeamGilbert/users_data/mk/sequencing_data/vintageRiboSeq/100125_wtFp+_MK_Gilbert_L2_sequence.txt.gz"
+OUTPUT_DIRECTORY="/home/mk/Illumina_Analyzed/finalRunRACK1Paper/vintage_RiboSeq/WT_Fp1_pA/"
+OUTPUT_PREFIX="WT_Fp1_pA"
+USE_PREDEFINED_STRAIN=true #true or false. If false, need to define and uncomment the next 4 variables [note that the defaults here WILL FAIL, as they are for the old pipeline]
+PREDEFINED_STRAIN=sigma_SGD_2014 #Only used if USE_PREDEFINED_STRAIN above is True. Currently s288c and sigma are supported
+ADAPTOR_LIGATION_USED=true #true if the library was prepared with a ligated 3'adaptor that needs to be trimmed, otherwise, polyadenylation is assumed, include sequence below
+ADAPTOR_SEQUENCE="AAAAAAAAAAAAAAAAAAAAA" #this is the 5'->3' sequence of Josh's 3'adapter. This should be at the end of the reads
+UNIQUE_MAPPING_ONLY=true #Setting this to true will cause the pipeline to discard ALL multiply-mapped reads (they will still be in the bam mapping file, but not in any of the weighted files used in the downstream analysis)
+
+########################################
+#User preferences -analysis subpipeline#
+########################################
+FLANKING=1500   #number of nucleotides on either side of CDS to include for mapfootprintstoCDS.py
+
+#paramaters for plotting the sum of CDSprints at start and stop (plotmetaCDS.py)
+START_MIN=-21
+START_MAX=21
+STOP_MIN=-27
+STOP_MAX=15
+
+#parameters for making .wig files
+BIN_SIZE=1
+BIN_MIN=1
+CEILING=200
+
+
+####################
+#System preferences#
+####################
+#These generally do not need to be changed
+SCRIPTS_PATH='scripts/' #the path to the scripts folder
+MIN_MAPPING_LENGTH=18 #the smallest trimmed read that will be mapped
+
+
+####################
+#  Pipeline parts  #
+####################
+#Decide which parts of the pipeline you want to run.
+#Will crash if files from skipped parts are required for subsequent part, and not present.
+MAP_READS=true #Set this to False if you want to skip mapping
+ANALYZE_BY_LENGTH=false #True if you want to do all analysis with mapping reads broken down by length
+ANALYZE_COMBINED=true #True if you want to analyze all lengths combined
+ANALYZE_rRNA=true
+oligos=brar
+species=yeast
+CLEAN_UP=false

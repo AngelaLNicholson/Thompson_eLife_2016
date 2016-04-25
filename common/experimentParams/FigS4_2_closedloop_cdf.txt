@@ -1,0 +1,15 @@
+#FigS4-2, cdfs showing delta FP and delta total for closed-loop mRNAs in asc1-M1X
+INDIR1=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.18/DESeqData/yeast_mutants/
+OUTDIR=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/S4_TE_tot_CDFs/
+OUTPREFIX=
+FILES1
+yeast_mutants_M1X_allData_filtered.p
+ANALYSES
+CDF 150901_cl_M1X_TE -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_3A_3Bcombo.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_4A.txt -legends strong_closed_loop closed_loop -comparex 1 TE val --mw_pval
+CDF 150901_cl_M1X_FP -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_3A_3Bcombo.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_4A.txt -legends strong_closed_loop closed_loop -comparex 1 FP val --mw_pval
+CDF 150901_cl_M1X_tot -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_3A_3Bcombo.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_4A.txt -legends strong_closed_loop closed_loop -comparex 1 tot val --mw_pval
+
+PLOTS
+CDF {OUTDIR}150901_cl_five_M1X_TE -pickledObjects {OUTDIR}150901_cl_M1X_TE.p -figsize full -panels 2 -xlabel log2 TE (asc1-M1X/WT) -ylabel fraction of genes -xmin -1.5 -xmax 1.5 -axisfont 7 -tickfont 7 -legendfont 6 -legend_loc bottomright -ax_lw 0.75 -colors black vermillion reddishPurple
+CDF {OUTDIR}150901_cl_five_M1X_FP -pickledObjects {OUTDIR}150901_cl_M1X_FP.p -figsize full -panels 2 -xlabel log2 FP (asc1-M1X/WT) -ylabel fraction of genes -xmin -1.5 -xmax 1.5 -axisfont 7 -tickfont 7 -legendfont 6 -legend_loc bottomright -ax_lw 0.75 -colors black vermillion reddishPurple
+CDF {OUTDIR}150901_cl_M1X_tot -pickledObjects {OUTDIR}150901_cl_M1X_tot.p -figsize full -panels 2 -xlabel log2 total (asc1-M1X/WT) -ylabel fraction of genes -xmin -1.5 -xmax 1.5 -axisfont 7 -tickfont 7 -legendfont 6 -legend_loc bottomright -ax_lw 0.75 -colors black vermillion reddishPurple

@@ -1,0 +1,17 @@
+#Figure 1F, the delta TE histogram in asc1 M1X vs. the WT distribution
+#140909, put only the M1X and asc1Null data on the graph (the D109Y makes it hard to see the WT distribution behind it)
+INDIR1=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.18/DESeqData/yeast_mutants/
+OUTDIR=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/TEhistogram/
+OUTPREFIX=
+FILES1
+yeast_mutants_M1X_allData_filtered.p
+yeast_mutants_asc1Null_allData_filtered.p
+ANALYSES
+ScatterCDF 140909_WT_TEdist -comparex 1 TE A_r1 -comparey 1 TE A_r2 -transform log2 -legends WT_error
+ScatterCDF 140909_M1X_TEdist1 -comparex 1 TE A_r1 -comparey 1 TE B_r1 -transform log2 -legends WT_error
+ScatterCDF 140909_M1X_TEdist2 -comparex 1 TE A_r2 -comparey 1 TE B_r2 -transform log2 -legends WT_error
+ScatterCDF 140909_asc1Null_TEdist1 -comparex 2 TE A_r1 -comparey 2 TE B_r1 -transform log2 -legends WT_error
+ScatterCDF 140909_asc1Null_TEdist2 -comparex 2 TE A_r2 -comparey 2 TE B_r2 -transform log2 -legends WT_error
+
+PLOTS
+LineHist {OUTDIR}140909_TEhist_filtered_forFig -pickledObjects {OUTDIR}140909_WT_TEdist.p {OUTDIR}140909_M1X_TEdist1.p {OUTDIR}140909_M1X_TEdist2.p {OUTDIR}140909_asc1Null_TEdist1.p {OUTDIR}140909_asc1Null_TEdist2.p -xmin -1.5 -xmax 1.5 -binsize 0.025 -xlabel log2 TE -ylabel fraction of genes -figsize full -panels 4 -axisfont 7 -tickfont 5 -legendfont 5 -legend_loc topright -legends WT M1X_r1 M1X_r2 asc1null_r1 asc1null_r2 -legendhandles 1.2 -colors black vermillion vermillion_dashed reddishPurple reddishPurple_dashed

@@ -1,0 +1,19 @@
+#Fig 4B and 4D, violin plots for RPs and MRPs in the asc1 mutants
+INDIR1=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.18/DESeqData/yeast_mutants/
+OUTDIR=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/ViolinPlots/
+OUTPREFIX=
+FILES1
+yeast_mutants_D109Y_allData_filtered.p
+yeast_mutants_M1X_allData_filtered.p
+yeast_mutants_asc1Null_allData_filtered.p
+ANALYSES
+CDF 140708_D109Y_violin_RP_TE -comparex 1 TE val -mutants D109Y -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/RP_genes_PV.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends RP MRP --mw_pval
+CDF 140708_M1X_violin_RP_TE -comparex 2 TE val -mutants M1X -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/RP_genes_PV.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends RP MRP --mw_pval
+CDF 140708_asc1Null_violin_RP_TE -comparex 3 TE val -mutants asc1_ -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/RP_genes_PV.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends RP MRP --mw_pval
+CDF 140708_D109Y_violin_RP_FP -comparex 1 FP val -mutants D109Y -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/RP_genes_PV.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends RP MRP --mw_pval
+CDF 140708_M1X_violin_RP_FP -comparex 2 FP val -mutants M1X -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/RP_genes_PV.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends RP MRP --mw_pval
+CDF 140708_asc1Null_violin_RP_FP -comparex 3 FP val -mutants asc1_ -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/RP_genes_PV.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends RP MRP --mw_pval
+
+PLOTS
+ViolinSig {OUTDIR}140909_asc1_Violin_TE_max75_3pan_forFig2 -pickledObjects {OUTDIR}140708_D109Y_violin_RP_TE.p {OUTDIR}140708_M1X_violin_RP_TE.p {OUTDIR}140708_asc1Null_violin_RP_TE.p -ylabel percent change TE (mutant/WT) --percent -figsize full -panels 3 -ymin -75 -ymax 75 -axisfont 5 -tickfont 5 -legendfont 5 -legend_loc topright -colors blue vermillion reddishPurple
+ViolinSig {OUTDIR}140909_asc1_Violin_FP_max75_3pan_forFig2 -pickledObjects {OUTDIR}140708_D109Y_violin_RP_FP.p {OUTDIR}140708_M1X_violin_RP_FP.p {OUTDIR}140708_asc1Null_violin_RP_FP.p -ylabel percent change FP (mutant/WT) --percent -figsize full -panels 3 -ymin -75 -ymax 75 -axisfont 5 -tickfont 5 -legendfont 5 -legend_loc topright -colors blue vermillion reddishPurple

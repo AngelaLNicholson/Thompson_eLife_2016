@@ -1,0 +1,14 @@
+#FigS4-1F, scatter plot to show difference between TE calculated using RiboZero (on y-axis) vs. using pA selection (on x-axis)
+INDIR1=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.18/DESeqData/yeast_mutants/
+INDIR2=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.18/DESeqData/ribozero_final/
+OUTDIR=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/S4_riboZero/
+OUTPREFIX=
+FILES1
+yeast_mutants_M1X_allData_filtered.p
+FILES2
+yeast_rz_M1X_allData_filtered.p
+ANALYSES
+Scatter 140916_M1X_TE_RZ_v_pA_scatter -comparex 1 TE val -comparey 2 TE val -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/RP_genes_PV.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends RP MRP
+
+PLOTS
+Scatter {OUTDIR}140916_M1X_TE_RZ_v_pA_scatter -pickledObjects {OUTDIR}140916_M1X_TE_RZ_v_pA_scatter.p -ylabel TE (M1X/WT) RiboZero -xlabel TE (M1X/WT) pA selection -figsize half -panels 1.9 --draw_diagonal -axisfont 5 -tickfont 5 -legendfont 5 -scattersize 0.2 -colors black blue reddishPurple -legend_loc bottomright

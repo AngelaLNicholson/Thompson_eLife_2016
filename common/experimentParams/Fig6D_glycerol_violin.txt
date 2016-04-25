@@ -1,0 +1,18 @@
+#Fig 6D, violin plots for RPs and MRPs grown in glycerol
+INDIR1=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.18/DESeqData/
+OUTDIR=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F2/glycerolViolin/
+OUTPREFIX=
+FILES1
+yeast_mutants/yeast_mutants_M1X_allData_filtered.p
+yeast_glycerol/yeast_glycerol_gly_M1X_allData_filtered.p
+ANALYSES
+CDF 140708_gluM1X_violin_FP -comparex 1 FP val -mutants FP -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends MRP --mw_pval
+CDF 140708_gluM1X_violin_tot -comparex 1 tot val -mutants total -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends MRP --mw_pval
+CDF 140708_gluM1X_violin_TE -comparex 1 TE val -mutants TE -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends MRP --mw_pval
+CDF 140708_glyM1X_violin_FP -comparex 2 FP val -mutants FP -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends MRP --mw_pval
+CDF 140708_glyM1X_violin_tot -comparex 2 tot val -mutants total -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends MRP --mw_pval
+CDF 140708_glyM1X_violin_TE -comparex 2 TE val -mutants TE -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends MRP --mw_pval
+
+PLOTS
+ViolinSig {OUTDIR}140808_glyM1X_violin_max90_3pan_forFig -pickledObjects {OUTDIR}140708_glyM1X_violin_FP.p {OUTDIR}140708_glyM1X_violin_tot.p {OUTDIR}140708_glyM1X_violin_TE.p -ylabel percent change (mutant/WT) --percent -figsize full -panels 3 -ymin -90 -ymax 90 -axisfont 5 -tickfont 5 -legendfont 5 -legend_loc topright -fig_scalerx 0.66 -colors blue yellow bluishGreen
+ViolinSig {OUTDIR}140808_gluM1X_violin_max90_3pan_forFig -pickledObjects {OUTDIR}140708_gluM1X_violin_FP.p {OUTDIR}140708_gluM1X_violin_tot.p {OUTDIR}140708_gluM1X_violin_TE.p -ylabel percent change (mutant/WT) --percent -figsize full -panels 3 -ymin -90 -ymax 90 -axisfont 5 -tickfont 5 -legendfont 5 -legend_loc topright -fig_scalerx 0.66 -colors blue yellow bluishGreen

@@ -1,0 +1,12 @@
+#Fig 4C, scatterplot histogram (scatterhist) to show the decrease in FP and total for the RP and MRP genes
+INDIR1=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.18/DESeqData/yeast_mutants/
+OUTDIR=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/S3_scatterHist/asc1_mutantScatterHist/
+OUTPREFIX=
+FILES1
+yeast_mutants_M1X_allData_filtered.p
+ANALYSES
+Scatter 140916_M1X_RP_scatterHist -comparex 1 tot val -comparey 1 FP val -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/RP_genes_PV.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/geneLists/mitoribo_keyword.txt -legends RP MRP
+PLOTS
+ScatterHist {OUTDIR}140916_M1X_RP_scatterHist_3lim_rval -pickledObjects {OUTDIR}140916_M1X_RP_scatterHist.p -xmin -3 -xmax 3 -ymin -3 -ymax 3 -xlabel log2 total (asc1 M1X/WT) -ylabel log2 FP (asc1 M1X/WT) -figsize full -panels 2 --draw_diagonal -axisfont 7 -tickfont 5 -legendfont 7 -legend_loc topright
+
+#note: decided to remove the side histograms for the figure

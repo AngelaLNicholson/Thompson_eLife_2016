@@ -1,0 +1,15 @@
+#Fig 2B and 2C, make deltaTE asc1-D109Y vs. asc1-M1X and asc1Null scatter plots
+INDIR1=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.18/DESeqData/yeast_mutants/
+OUTDIR=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/F1/TEcomparisons_array/
+OUTPREFIX=
+FILES1
+yeast_mutants_M1X_allData_filtered.p
+yeast_mutants_asc1Null_allData_filtered.p
+yeast_mutants_D109Y_allData_filtered.p
+
+ANALYSES
+MultiScatter 150608_TE_array_asc14 -comparex 1 TE val -mutants M1X asc1 D109Y
+PLOTS
+MultiScatter {OUTDIR}150608_TE_array_asc1mutants0.2pt_4 -pickledObjects {OUTDIR}150608_TE_array_asc14.p -xmin -1 -ymin -1 -xmax 1 -ymax 1 -axisfont 7 -tickfont 5 -panels 2 -scattersize 0.2
+
+#note: replace yeast_mutants_D109Y_allData_filtered.p with yeast_mutants_DE_allData_filtered.p to get Fig 2C

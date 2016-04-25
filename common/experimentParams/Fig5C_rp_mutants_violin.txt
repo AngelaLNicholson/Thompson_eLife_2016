@@ -1,0 +1,20 @@
+#Fig 5C, violin plots for closed loop mRNAs in the rp mutants
+INDIR1=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.18/DESeqData/yeast_rps/
+OUTDIR=/Users/MK/Desktop/Gilbertlab/digital_lab_notebook/Paper_planning/RACK1_paper/Figures/FIGUREDATA/S6_rpgs/RPGviolin/
+OUTPREFIX=
+FILES1
+yeast_mutants_M1X_allData_filtered.p
+yeast_mutants_rpl23b_allData_filtered.p
+yeast_mutants_rpp1a_allData_filtered.p
+rps_rps0b_allData_filtered.p
+rps_rps16b_allData_filtered.p
+
+ANALYSES
+CDF 160301_M1X_violin_cl_TE -comparex 1 TE val -mutants asc1_M1X -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_3A_3Bcombo.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_4A.txt -legends strong_closed_loop closed_loop --mw_pval
+CDF 160301_rpl23b_violin_cl_TE -comparex 2 TE val -mutants rpl23b_ -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_3A_3Bcombo.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_4A.txt -legends strong_closed_loop closed_loop --mw_pval
+CDF 160301_rpp1a_violin_cl_TE -comparex 3 TE val -mutants rpp1a_ -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_3A_3Bcombo.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_4A.txt -legends strong_closed_loop closed_loop --mw_pval
+CDF 160301_rps0b_violin_cl_TE -comparex 4 TE val -mutants rpp1a_ -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_3A_3Bcombo.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_4A.txt -legends strong_closed_loop closed_loop --mw_pval
+CDF 160301_rps16b_violin_cl_TE -comparex 5 TE val -mutants rpp1a_ -genesets /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_3A_3Bcombo.txt /Users/MK/Desktop/Gilbertlab/digital_lab_notebook/C6.33/data/costelloGroups_Group_4A.txt -legends strong_closed_loop closed_loop --mw_pval
+
+PLOTS
+ViolinSig {OUTDIR}160301_rpg_Violin_TE_max75_3pan_cl_forFig -pickledObjects {OUTDIR}160301_M1X_violin_cl_TE.p {OUTDIR}160301_rpl23b_violin_cl_TE.p {OUTDIR}160301_rpp1a_violin_cl_TE.p {OUTDIR}160301_rps0b_violin_cl_TE.p {OUTDIR}160301_rps16b_violin_cl_TE.p -ylabel percent change TE (mutant/WT) --percent -figsize full -panels 3 -ymin -75 -ymax 75 -axisfont 5 -tickfont 5 -legendfont 5 -legend_loc topright -colors vermillion skyBlue bluishGreen reddishPurple orange

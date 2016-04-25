@@ -1,0 +1,39 @@
+#160218 input parameters for running DE Seq pipeline on the yeast other rps mutant data.
+summary_outname=rps
+experiment_outdir=/home/mk/TeamGilbert/users_data/mk/C6/C6.18/160218_rp_mutants_final/
+codons_to_exclude= 30
+read_co=128
+min_map_len=1
+library_locations
+WT_Fp1=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/WT_Fp1/output/WT_Fp1_full_weighted_mappings.wt_CDSprints.p
+WT_Fp2=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/WT_Fp2/output/WT_Fp2_full_weighted_mappings.wt_CDSprints.p
+WT_T1=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/WT_T1/output/WT_T1_full_weighted_mappings.wt_CDSprints.p
+WT_T2=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/WT_T2/output/WT_T2_full_weighted_mappings.wt_CDSprints.p
+rps0b_Fp1=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/Rps0b_Fp1/output/Rps0b_Fp1_full_weighted_mappings.wt_CDSprints.p
+rps0b_Fp2=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/Rps0b_Fp2/output/Rps0b_Fp2_full_weighted_mappings.wt_CDSprints.p
+rps0b_T1=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/Rps0b_T1/output/Rps0b_T1_full_weighted_mappings.wt_CDSprints.p
+rps0b_T2=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/Rps0b_T2/output/Rps0b_T2_full_weighted_mappings.wt_CDSprints.p
+rps16b_Fp1=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/Rps16b_Fp1/output/Rps16b_Fp1_full_weighted_mappings.wt_CDSprints.p
+rps16b_Fp2=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/Rps16b_Fp2/output/Rps16b_Fp2_full_weighted_mappings.wt_CDSprints.p
+rps16b_T1=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/Rps16b_T1/output/Rps16b_T1_full_weighted_mappings.wt_CDSprints.p
+rps16b_T2=/home/mk/Illumina_Analyzed/finalRunRACK1Paper/160201/Rps16b_T2/output/Rps16b_T2_full_weighted_mappings.wt_CDSprints.p
+replicate_matching
+WT_condition=WT
+outname=WT WT_Fp1 WT_Fp2 WT_T1 WT_T2
+outname=rps0b rps0b_Fp1 rps0b_Fp2 rps0b_T1 rps0b_T2
+outname=rps16b rps16b_Fp1 rps16b_Fp2 rps16b_T1 rps16b_T2
+BMC_dir=/home/mk/TeamGilbert/users_data/mk/sequencing_data/
+BMC_Names
+160201/D16-785-1772D/160201Gil_D16-785_NA_sequence.fastq.gz WT_Fp1
+160201/D16-786-1772D/160201Gil_D16-786_NA_sequence.fastq.gz Rps0b_Fp1
+160201/D16-787-1772D/160201Gil_D16-787_NA_sequence.fastq.gz Rps16b_Fp1
+160201/D16-788-1772D/160201Gil_D16-788_NA_sequence.fastq.gz WT_T1
+160201/D16-789-1772D/160201Gil_D16-789_NA_sequence.fastq.gz Rps0b_T1
+160201/D16-790-1772D/160201Gil_D16-790_NA_sequence.fastq.gz Rps16b_T1
+160201/D16-792-1772D/160201Gil_D16-792_NA_sequence.fastq.gz WT_Fp2
+160201/D16-793-1772D/160201Gil_D16-793_NA_sequence.fastq.gz Rps0b_Fp2
+160201/D16-794-1772D/160201Gil_D16-794_NA_sequence.fastq.gz Rps16b_Fp2
+160201/D16-795-1772D/160201Gil_D16-795_NA_sequence.fastq.gz WT_T2
+160201/D16-796-1772D/160201Gil_D16-796_NA_sequence.fastq.gz Rps0b_T2
+160201/D16-797-1772D/160201Gil_D16-797_NA_sequence.fastq.gz Rps16b_T2
+GEO_OUTDIR=/home/mk/TeamGilbert/users_data/mk/sequencing_data/160218_rps_GEOSubmission_final/
